@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<body>
+<div id="poisk">
+<input type="text" name="referal" placeholder="Поиск по сайту" value="" class="who"  autocomplete="off">
+<div class="vyvod">
+<ul class="search_result"></ul>
+</div></div> 
+
+<p>
+  <?php $file = file_get_contents("http://murdrum.ru/char/Obscurus");
+    preg_match("#<td.*?>(.*?)</td>#is", $file, $td);
+    preg_match("#<span.*?>(.*?)</span>#is", $td[1], $span);
+    $r = $td[1];
+    echo $r; ?>
+ <p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="search.js"></script>
+</body></html>
