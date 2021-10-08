@@ -1,0 +1,4 @@
+create database blog;
+use blog;
+create table posts (userId TINYINT UNSIGNED, id SMALLINT UNSIGNED, title TINYTEXT, body TEXT );
+create table comments (postId SMALLINT UNSIGNED, id SMALLINT UNSIGNED, name TINYTEXT, email TINYTEXT, body TEXT );
